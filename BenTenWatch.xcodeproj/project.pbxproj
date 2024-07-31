@@ -15,6 +15,11 @@
 		2B4A57E52C3AEDA400A516D0 /* BenTenWatch_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A57E42C3AEDA400A516D0 /* BenTenWatch_Watch_AppTests.swift */; };
 		2B4A57EF2C3AEDA400A516D0 /* BenTenWatch_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A57EE2C3AEDA400A516D0 /* BenTenWatch_Watch_AppUITests.swift */; };
 		2B4A57F12C3AEDA400A516D0 /* BenTenWatch_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4A57F02C3AEDA400A516D0 /* BenTenWatch_Watch_AppUITestsLaunchTests.swift */; };
+		2B8648472C5A2A6100DCBD05 /* ActiveSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8648422C5A2A6000DCBD05 /* ActiveSound.mp3 */; };
+		2B8648482C5A2A6100DCBD05 /* Picking2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8648432C5A2A6000DCBD05 /* Picking2.mp3 */; };
+		2B8648492C5A2A6100DCBD05 /* TransformBig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8648442C5A2A6000DCBD05 /* TransformBig.mp3 */; };
+		2B86484A2C5A2A6100DCBD05 /* CooldownBig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8648452C5A2A6000DCBD05 /* CooldownBig.mp3 */; };
+		2B86484B2C5A2A6100DCBD05 /* CooledBig.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2B8648462C5A2A6100DCBD05 /* CooledBig.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,11 @@
 		2B4A57EA2C3AEDA400A516D0 /* BenTenWatch Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BenTenWatch Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4A57EE2C3AEDA400A516D0 /* BenTenWatch_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenTenWatch_Watch_AppUITests.swift; sourceTree = "<group>"; };
 		2B4A57F02C3AEDA400A516D0 /* BenTenWatch_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BenTenWatch_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B8648422C5A2A6000DCBD05 /* ActiveSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ActiveSound.mp3; sourceTree = "<group>"; };
+		2B8648432C5A2A6000DCBD05 /* Picking2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Picking2.mp3; sourceTree = "<group>"; };
+		2B8648442C5A2A6000DCBD05 /* TransformBig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TransformBig.mp3; sourceTree = "<group>"; };
+		2B8648452C5A2A6000DCBD05 /* CooldownBig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CooldownBig.mp3; sourceTree = "<group>"; };
+		2B8648462C5A2A6100DCBD05 /* CooledBig.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = CooledBig.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +130,11 @@
 			children = (
 				2B4A57D32C3AEDA200A516D0 /* BenTenWatchApp.swift */,
 				2B4A57D52C3AEDA200A516D0 /* ContentView.swift */,
+				2B8648422C5A2A6000DCBD05 /* ActiveSound.mp3 */,
+				2B8648452C5A2A6000DCBD05 /* CooldownBig.mp3 */,
+				2B8648462C5A2A6100DCBD05 /* CooledBig.mp3 */,
+				2B8648432C5A2A6000DCBD05 /* Picking2.mp3 */,
+				2B8648442C5A2A6000DCBD05 /* TransformBig.mp3 */,
 				2B4A57D72C3AEDA400A516D0 /* Assets.xcassets */,
 				2B4A57D92C3AEDA400A516D0 /* Preview Content */,
 			);
@@ -283,8 +298,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8648472C5A2A6100DCBD05 /* ActiveSound.mp3 in Resources */,
+				2B8648482C5A2A6100DCBD05 /* Picking2.mp3 in Resources */,
 				2B4A57DB2C3AEDA400A516D0 /* Preview Assets.xcassets in Resources */,
 				2B4A57D82C3AEDA400A516D0 /* Assets.xcassets in Resources */,
+				2B86484B2C5A2A6100DCBD05 /* CooledBig.mp3 in Resources */,
+				2B86484A2C5A2A6100DCBD05 /* CooldownBig.mp3 in Resources */,
+				2B8648492C5A2A6100DCBD05 /* TransformBig.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct ContentView: View {
     @State var isHidden: Bool = false
@@ -19,6 +20,19 @@ struct ContentView: View {
     @State var offSetPosition:CGFloat = 110
     let animationDuration = 0.4
     let diamonDiameter:CGFloat = 200
+    
+    @State private var audioPlayer: AVAudioPlayer?
+    
+    func playSound(sound: String) {
+        guard let url = Bundle.main.url(forResource: sound, withExtension: "mp3") else { return }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("Error playing sound: \(error)")
+        }
+    }
     
     var body: some View {
         ZStack {
@@ -35,7 +49,7 @@ struct ContentView: View {
                             withAnimation(Animation.linear(duration: animationDuration).repeatForever()) {
                                 activeColor = Color.red
                             }
-                            withAnimation(Animation.linear(duration: animationDuration).delay(3.2)) {
+                            withAnimation(Animation.linear(duration: animationDuration).delay(2.5)) {
                                 activeColor = Color.white
                                 isActive = false
                                 isCoolDown = true
@@ -44,7 +58,9 @@ struct ContentView: View {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 8.0) {
                                 isCoolDown = false
                                 backgroundColor = Color.greenBen
+                                playSound(sound: "CooledBig")
                             }
+                            playSound(sound: "CooldownBig")
                         }
                 } else {
                     if isCoolDown {
@@ -81,6 +97,10 @@ struct ContentView: View {
                             isActive = true
                             diamondColor = .grayBen
                         }
+                        playSound(sound: "TransformBig")
+                    }
+                    .onAppear{
+                        playSound(sound: "ActiveSound")
                     }
             }
             Diamond()
@@ -96,6 +116,7 @@ struct ContentView: View {
 struct HorizontalCarousel: View {
     var imageNames: [String]
     @State private var selectedImageIndex: Int = 0
+    @State private var audioPlayer: AVAudioPlayer?
 
     var body: some View {
         ZStack {
@@ -112,6 +133,19 @@ struct HorizontalCarousel: View {
             .frame(height: 300)
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             .ignoresSafeArea()
+            .onChange(of: selectedImageIndex) { oldValue, newValue in
+                playSound(sound: "Picking2")
+            }
+        }
+    }
+    func playSound(sound: String) {
+        guard let url = Bundle.main.url(forResource: sound, withExtension: "mp3") else { return }
+
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        } catch {
+            print("Error playing sound: \(error)")
         }
     }
 }
