@@ -556,7 +556,7 @@
 				DEVELOPMENT_TEAM = N2K3R4X37B;
 				INFOPLIST_KEY_CFBundleDisplayName = BenTenWatch;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourpet.BenTenWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourpet.BenTenWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -572,7 +572,7 @@
 				DEVELOPMENT_TEAM = N2K3R4X37B;
 				INFOPLIST_KEY_CFBundleDisplayName = BenTenWatch;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.yourpet.BenTenWatch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourpet.BenTenWatch.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
