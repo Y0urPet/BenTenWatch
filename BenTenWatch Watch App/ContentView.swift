@@ -9,18 +9,22 @@ import SwiftUI
 
 struct ContentView: View {
     @State var isHidden: Bool = false
-    @State var offSetPosition:CGFloat = 110
-    @State var diamondColor = Color.grayBen
-    let diamonDiameter:CGFloat = 200
     @State var isActive = false
-    @State var activeColor = Color.white
     @State var isCoolDown = false
+    
+    @State var diamondColor = Color.grayBen
+    @State var activeColor = Color.white
+    @State var backgroundColor = Color.greenBen
+    
+    @State var offSetPosition:CGFloat = 110
+    let animationDuration = 0.4
+    let diamonDiameter:CGFloat = 200
     
     var body: some View {
         ZStack {
             if isHidden {
                 Rectangle()
-                    .fill(.grayBen)
+                    .fill(backgroundColor)
                     .ignoresSafeArea()
             } else {
                 if isActive {
@@ -28,49 +32,34 @@ struct ContentView: View {
                         .fill(activeColor)
                         .ignoresSafeArea()
                         .onTapGesture {
-                            withAnimation(Animation.linear(duration: 0.4)) {
+                            withAnimation(Animation.linear(duration: animationDuration).repeatForever()) {
                                 activeColor = Color.red
                             }
-                            withAnimation(Animation.linear(duration: 0.4).delay(0.8)) {
-                                activeColor = Color.white
-                            }
-                            withAnimation(Animation.linear(duration: 0.4).delay(1.2)) {
-                                activeColor = Color.red
-                            }
-                            withAnimation(Animation.linear(duration: 0.4).delay(1.6)) {
-                                activeColor = Color.white
-                            }
-                            withAnimation(Animation.linear(duration: 0.4).delay(2)) {
-                                activeColor = Color.red
-                            }
-                            withAnimation(Animation.linear(duration: 0.4).delay(2.4)) {
-                                activeColor = Color.white
-                            }
-                            withAnimation(Animation.linear(duration: 0.4).delay(2.8)) {
-                                activeColor = Color.red
-                            }
-                            withAnimation(Animation.linear(duration: 0.4).delay(3.2)) {
+                            withAnimation(Animation.linear(duration: animationDuration).delay(3.2)) {
                                 activeColor = Color.white
                                 isActive = false
                                 isCoolDown = true
+                                backgroundColor = Color.red
                             }
                             DispatchQueue.main.asyncAfter(deadline: .now() + 8.0) {
                                 isCoolDown = false
+                                backgroundColor = Color.greenBen
                             }
                         }
                 } else {
                     if isCoolDown {
                         Rectangle()
-                            .fill(.red)
+                            .fill(backgroundColor)
                             .ignoresSafeArea()
                     } else {
                         Rectangle()
-                            .fill(.greenBen)
+                            .fill(backgroundColor)
                             .ignoresSafeArea()
                             .onTapGesture {
                                 withAnimation(Animation.linear(duration: 0.4)) {
                                     offSetPosition = 0
                                     isHidden = true
+                                    backgroundColor = Color.grayBen
                                     diamondColor = .grayBen
                                 }
                             }
